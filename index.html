@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Joystick</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
+    <style>
+      /* Anda bisa menambahkan gaya khusus untuk joystick di sini jika diperlukan */
+    </style>
+  </head>
+  <body>
+    <!-- A-Frame scene dengan joystick -->
+    <a-scene id="scene1" vr-mode-ui="enabled: false">
+      <!-- Kamera -->
+      <a-entity id="camera" camera look-controls wasd-controls position="0 1.5 3"></a-entity>
+
+      <!-- Model GLTF -->
+      <a-gltf-model src="model/pokecenter.glb" position="0 1 1.2" scale="2 2 2"></a-gltf-model>
+
+      <!-- Joystick di sebelah kanan -->
+      <a-entity joystick></a-entity>
+    </a-scene>
+  </body>
+</html>
